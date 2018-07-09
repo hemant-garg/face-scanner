@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.ImageDescription{
+	width: 45%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+@media screen and (max-width: 1000px){
+	.ImageDescription{
+		width: 100%;
+		margin-top: 3rem;
+		padding: 1rem;
+	}
+	.facedetails{
+		margin-top: 3rem;
+	}
+}
+#canva-container{
+	width: 100%;
+	flex-wrap: wrap;
+	display: flex;
+}
+
+
+.canva{
+	cursor: pointer;
+	border-radius: 1rem;
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	width: 6rem;
+	height: 6rem;
+	margin-right: 1.2rem;
+	margin-bottom: 1rem;
+	box-shadow: .2rem .2rem 1rem rgba(0,0,0,.2);
+	padding: 3px;
+
+}
+
+.activecanva{
+	border: 2px solid rgba(72, 126, 176, .9);
+	box-shadow: .2rem .2rem 2rem rgba(0,0,0,.4);
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+.facedetails{
+	background-color: #487eb0;
+	padding: 1rem;
+	font-family: 'Roboto', sans-serif;
+	box-shadow: .22rem .2rem 1rem rgba(0,0,0,.5);
+	color: #eee;
+	border-radius: 1rem;
+	letter-spacing: 3px;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+.age-block, .gender-block, .culture-block{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.facedata{
+ border-bottom: 1px solid #ddd;
+ margin: 0;
+ padding: 1rem ;
+	text-shadow: .1rem .1rem .5rem rgba(0,0,0,.5);
+}
+.facedata h3{
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+.value{
+	text-align: right;
+	margin-left: 3rem;
+}
