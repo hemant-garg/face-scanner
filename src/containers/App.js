@@ -5,6 +5,7 @@ import SearchBox from '../components/SearchBox/SearchBox';
 import ImageBox from '../components/ImageBox/ImageBox';
 import Box from '../components/Box/Box';
 import Flex from '../components/Flex/Flex';
+import ErrorBounding from '../components/ErrorBounding.js';
 import ImageDescription from '../components/ImageDescription/ImageDescription';
 import './App.css';
 
@@ -54,13 +55,20 @@ callapi = () => {
 			  .then(res => res.outputs[0].data.regions)
 			  .then(data => this.extractBoxes(data))
 			  .then(boxes => this.setState({boxes: boxes}))
-			  .catch(err => console.log(err));
+			  .catch(err => this.showError(err));
 }
 onCloseClick = () => {
 	this.setState({route: 'home'});
 }
-
+showError = (err) => {
+	this.setState({route: 'home'});
+	const error = document.getElementById('error');
+	error.style.display = 'block';
+}
 extractBoxes = (data) => {
+	
+	const error = document.getElementById('error');
+	error.style.display = 'none';
 	this.setState({data: data});
 	const retrieveBoxes = data.map( faces => faces.region_info.bounding_box)
 	const image = document.getElementById('image');
@@ -106,11 +114,13 @@ clearCanvas = () => {
 		        <Nav />
 		        <Flex >
 					<SearchBox onInputChange={this.onInputChange} onClickAnalyse={this.onClickAnalyse} />
-		        	<Box>
-		        		<div onClick={this.onCloseClick} className="close">&#10006;</div>
-		        		<ImageBox imageUrl={imageUrl} boxes={boxes}/>
-		        		<ImageDescription data={data} imageUrl={imageUrl} boxes={boxes} />
-		        	</Box>
+		        	<ErrorBounding>
+			        	<Box>
+			        		<div onClick={this.onCloseClick} className="close">&#10006;</div>
+			        		<ImageBox imageUrl={imageUrl} boxes={boxes}/>
+			        		<ImageDescription data={data} imageUrl={imageUrl} boxes={boxes} />
+			        	</Box>
+		        	</ErrorBounding>
 		        </Flex>
 		      </div>
 		    );	

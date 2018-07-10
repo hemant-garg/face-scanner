@@ -6,40 +6,23 @@
 	display: inline-block;
 }
 
+#error{
+	color: #e74c3c;
+	font-size: 1.4rem;
+	width: 90%;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 1.5rem;
+	letter-spacing: 2px;
+	display: none;
+}
 
-@media screen and (max-width: 1000px){
-	.SearchBox{
-		width: 50%;
-		margin-top: 3rem;
-	}
-}
-@media screen and (max-width: 750px){
-	.SearchBox{
-		text-align: center;
-		width: 100%;
-		margin-top: 3rem;
-	}
-	.searchboxcontent{
-		width: 60%;
-		margin: 0 auto;
-	}
-	#searchinput{
-		margin: 0 auto;
-	}
-}
-@media screen and (max-width: 600px){
-	
-	.searchboxcontent{
-		width: 100%;
-	}
-}
 .app-description{
 	font-size: 2rem;
 	line-height: 170%;
 	letter-spacing: 1px;
+	margin-bottom: 5rem;
 }
 .searchinputcontainer{
-	margin-top: 5rem;
 	position: relative;
 }
 #searchinput{
@@ -103,4 +86,35 @@
 .searchbutton:hover, .searchbutton:focus, .searchbutton:active{
 	transform: scale(1.1);
 	filter: contrast(1.2);
+}
+@media screen and (max-width: 1000px){
+	.SearchBox{
+		width: 50%;
+		margin-top: 3rem;
+	}
+}
+@media screen and (max-width: 750px){
+	.SearchBox{
+		text-align: center;
+		width: 100%;
+		margin-top: 3rem;
+	}
+	.searchboxcontent{
+		width: 60%;
+		margin: 0 auto;
+	}
+	#searchinput{
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 600px){
+	#error{
+		margin: 0 auto 1.5rem auto;
+	}
+	.searchboxcontent{
+		width: 100%;
+	}
+	.app-description{
+		font-size: 1.8rem;
+	}
 }
