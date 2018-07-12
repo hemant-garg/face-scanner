@@ -12,25 +12,7 @@
 	box-shadow: .2rem .2rem 1rem rgba(116, 188, 251, .5);
 }
 
-@media screen and (max-width: 1000px){
-	.Box{
-		width: 45%;
-		margin: 5rem auto;
-	}
-}
-@media screen and (max-width: 750px){
-	.Box{
-		width: 70%;
-		margin: 5rem auto;
-	}
-}
-@media screen and (max-width: 600px){
-	.Box{
-		width: 80%;
-		padding: 1.5rem;
-		margin: 5rem auto;
-	}
-}
+
 .close{
 	display: inline-block;
 	margin: 0;
@@ -56,4 +38,26 @@
 	     -o-transform: rotate(-90deg) scale(1.1);
 	        transform: rotate(-90deg) scale(1.1);
 	text-shadow: .3rem .3rem 1rem rgba(0,0,0,.4);
+}
+@media screen and (max-width: 1000px){
+	.Box{
+		width: 45%;
+		margin: 5rem auto;
+	}
+}
+@media screen and (max-width: 750px){
+	.Box{
+		width: 70%;
+		margin: 5rem auto;
+	}
+	.close{
+		font-size: 2.5rem;
+	}
+}
+@media screen and (max-width: 600px){
+	.Box{
+		width: 80%;
+		padding: 1.5rem;
+		margin: 5rem auto;
+	}
 }
