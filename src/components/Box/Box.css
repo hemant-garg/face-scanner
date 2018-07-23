@@ -56,7 +56,7 @@
 }
 @media screen and (max-width: 600px){
 	.Box{
-		width: 80%;
+		width: 90%;
 		padding: 1.5rem;
 		margin: 5rem auto;
 	}
