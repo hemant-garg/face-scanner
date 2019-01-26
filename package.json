@@ -2,7 +2,7 @@
   "name": "face-scanner",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hemant-garg.github.io/face-scanner",
+  //"homepage": "https://hemant-garg.github.io/face-scanner",
   "dependencies": {
     "clarifai": "^2.8.0",
     "gh-pages": "^1.2.0",
@@ -11,8 +11,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    //"predeploy": "npm run build",
+    //"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
